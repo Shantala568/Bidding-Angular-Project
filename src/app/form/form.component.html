@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bidding Form</title>
+</head>
+<body>
+  <form action="/submit-bid" method="post" enctype="multipart/form-data">
+	  <h2>Item Information</h2>
+	<label for="item-picture">Item Picture:</label>
+    <input type="file" id="item-picture" name="item-picture" accept="image/*" required>
+    <label for="item-name">Item Name:</label>
+    <input type="text" id="item-name" name="item-name" required>
+    <label for="item-description">Item Description:</label>
+    <textarea id="item-description" name="item-description" required></textarea>
+    <label for="initial-owner-name">Initial Owner Name:</label>
+    <input type="text" id="initial-owner-name" name="initial-owner-name" required>
+    <label for="starting-amount">Amount:</label>
+    <input type="number" id="starting-amount" name="starting-amount" min="0" step="0.01" required>
+    <label for="minimum-bid">Minimum Bid:</label>
+    <input type="number" id="minimum-bid" name="minimum-bid" min="0" step="0.01" required>
+    <label for="auction-time">Auction Time:</label>
+    <input type="datetime-local" id="auction-time" name="auction-time" required>
+    <label for="minimum-bidder">Minimum Bidder:</label>
+    <input type="text" id="minimum-bidder" name="minimum-bidder" required>
+    <label for="minimum-increment">Minimum Increment:</label>
+    <input type="number" id="minimum-increment" name="minimum-increment" min="0" step="0.01" required>
+	  
+    <input type="submit" value="Start Auction">
+	  <input type="submit" value="End Auction">
+  </form>
+</body>
+</html>
